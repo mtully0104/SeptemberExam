@@ -9,12 +9,12 @@ namespace TestProject1
         public void Test_Bike_AddVat()
         {
             //arrange
-            Bike b1 = new Bike() {ID = 2, price =10m };
+            Bike b1 = new Bike() {ID = 2, Price =10m };
             decimal expectedPrice = 12.3m;
             //act
             b1.AddVat(1.23m);
             //assert
-            Assert.AreEqual(expectedPrice, b1.price);
+            Assert.AreEqual(expectedPrice, b1.Price);
         }
     }
 }
