@@ -12,7 +12,10 @@ namespace SeptemberExam
         //prop
         public int BikeID { get; set; }
         public int ID { get; set; }
-        public string  Name { get; set; }
+        public enum BikeTypes { Racing, Electric, Regular };
+
+        public BikeTypes Type { get; set; }
+    public string  Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
 
