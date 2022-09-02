@@ -20,9 +20,21 @@ namespace SeptemberExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Bike> allBikes;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            BikeData db = new BikeData();
+            var query = from b in db.Bikes
+                        orderby b.Price
+                        select b;
+
+            allBikes = query.ToList();
+            lbxGames.ItemsSource = allBikes;
         }
     }
 }
